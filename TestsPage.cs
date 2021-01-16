@@ -27,9 +27,7 @@ namespace AutomatedTestsRefresh
         {
             var user = FormModels.Create();
             formPage.FillForm(user);
-
-            Assert.AreEqual("Thanks for submitting the form", formPage.CompleteForm.Text);
-            
+            formPage.AssertTestForm();     
         }
     }
 }
